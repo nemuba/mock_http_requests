@@ -35,7 +35,7 @@ module MockHttpRequest
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
-    config.hosts << 'mock-http-requests.herokuapp.com'
+    config.hosts << ENV['HOST']
     config.hosts << 'www.example.com'
   end
 end
