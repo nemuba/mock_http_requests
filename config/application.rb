@@ -36,5 +36,6 @@ module MockHttpRequest
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
     config.hosts << 'mock-http-requests.herokuapp.com'
+    config.hosts << 'www.example.com'
   end
 end
