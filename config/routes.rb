@@ -1,16 +1,5 @@
 # frozen_string_literal: true
 
-# RestrictedListConstraint is a custom constraint that can be used to restrict
-class RestrictedListConstraint
-  def initialize
-    @codes = Rack::Utils::HTTP_STATUS_CODES.keys
-  end
-
-  def matches?(request)
-    @codes.include?(request.params[:status_code].to_i)
-  end
-end
-
 Rails.application.routes.draw do
   root 'homepage#index'
   get 'homepage/index'
@@ -20,5 +9,5 @@ Rails.application.routes.draw do
   put '/put', to: 'requests#update'
   delete '/delete', to: 'requests#destroy'
 
-  match '/:status_code', to: 'requests#status_code', via: :all, constraints: RestrictedListConstraint.new
+  match '/:status_code', to: 'requests#status_code', via: :all, constraints: RestrictedConstraints.new
 end
