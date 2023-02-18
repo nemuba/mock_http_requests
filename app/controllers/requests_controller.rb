@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# RequestsController is a controller that can be used to test HTTP requests
 class RequestsController < ApplicationController
   def index
     json_response(message(200))

@@ -1,7 +1,9 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class RequestsControllerTest < ActionDispatch::IntegrationTest
-  REQUEST_MESSAGE = "request received with success and status code".freeze
+  REQUEST_MESSAGE = 'request received with success and status code'
 
   def message_response_equal?(method, code)
     json_parse['message'] == "#{method} #{REQUEST_MESSAGE} #{code}"

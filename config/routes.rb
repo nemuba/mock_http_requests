@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# RestrictedListConstraint is a custom constraint that can be used to restrict
 class RestrictedListConstraint
   def initialize
     @codes = Rack::Utils::HTTP_STATUS_CODES.keys
