@@ -10,8 +10,11 @@
 # See https://docs.rubocop.org/rubocop/configuration
 
 # exclude all files in the vendor directory
-require:
-  - rubocop-rails
+# Omakase Ruby styling for Rails
+inherit_gem:
+  rubocop-rails-omakase: rubocop.yml
+
+# Your own specialized rules go here
 
 
 

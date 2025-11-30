@@ -9,6 +9,6 @@ module HandleException
   end
 
   def render_error
-    json_response({ message: 'Internal Server Error' }, :internal_server_error)
+    json_response({ message: "Internal Server Error" }, :internal_server_error)
   end
 end

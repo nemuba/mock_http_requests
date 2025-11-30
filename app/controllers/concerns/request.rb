@@ -4,7 +4,7 @@
 module Request
   extend ActiveSupport::Concern
 
-  REQUEST_MESSAGE = 'request received with success and status code'
+  REQUEST_MESSAGE = "request received with success and status code"
 
   def params_present?
     (request.post? || request.put?) && params[:request].present?
